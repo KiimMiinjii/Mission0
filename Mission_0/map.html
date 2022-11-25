@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>남율건설</title>
+      <link rel="stylesheet" href="css/map.css" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200&display=swap"
+         rel="stylesheet"
+      />
+      <script src="javascript/jquery-3.6.1.min.js"></script>
+      <script src="javascript/map.js"></script>
+   </head>
+   <body>
+      <div id="wrap">
+         <!-- 헤더 -->
+         <header>
+            <div id="head">
+               <h1>
+                  <a href="index.html"
+                     ><img src="images/logo.png" alt="logo" id="logo"
+                  /></a>
+               </h1>
+               <nav id="navi">
+                  <ul>
+                     <li>
+                        <a href="announce.html">회사소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">조직도</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="#">사업영역</a>
+                    <ul class="submenu">
+                        <li><a href="#">주택사업</a></li>
+                        <li><a href="#">건축사업</a></li>
+                        <li><a href="#">인테리어</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a href="#">입주정보</a>
+                        <ul class="submenu">
+                            <li><a href="#">입주단지</a></li>
+                            <li><a href="#">입주캘린더</a></li>
+                            <li><a href="#">입주모임</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">인재채용</a>
+                        <ul class="submenu">
+                            <li><a href="#">직무소개</a></li>
+                            <li><a href="#">채용공고</a></li>
+                            <li><a href="#">기술교육</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+               </nav>
+            </div>
+         </header>
+
+         <!-- 콘텐츠 -->
+         <div id="contents">
+            <div id="ms1" class="container bg-holder" data-width="500" data-height="400">
+               <section class="content">
+                   <h3>오시는 길</h3>
+                   </div>
+               </section>
+           </div>
+
+            <script src="javascript/jquery.parallax-scroll.min.js"></script>
+            <script>
+                $(function(){
+                    $('scroll').click(function(e){
+                        e.preventDefault();
+                        $('html, body').animate(
+                            {srollTop:$(this.hash).offset().top}, 400);
+                         
+                  
+                  
+                         $(window).resize(function(){
+                            $('.container').width($(window).width()).height($(window).height());});
+                    });
+                 
+                   setTimeout(function(){
+                    $(window).resize()
+                   },1000);
+                
+                    $('.bg-holder').parallaxScroll({
+                  
+                    friction: 0.45
+                    });
+                });
+            </script>
+            <div class="map_box">
+               <div id="map">
+                  <script
+                     type="text/javascript"
+                     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=121113ee14acc7c3e3d0ac79e1a88ad6"
+                  ></script>
+               </div>
+               <script>
+                  var container = document.getElementById('map');
+                  var options = {
+                     center: new kakao.maps.LatLng(33.450701, 126.570667),
+                     level: 3,
+                  };
+
+                  var map = new kakao.maps.Map(container, options);
+               </script>
+            </div>
+         </div>
+
+         <!-- 푸터 -->
+         <footer>
+            <div id="foot">
+
+               <div class="copy">
+                  COPYRIGHT ©	by WEBDESIGN. ALL RIGHTS RESERVED
+               </div>
+               <div class="site">
+                <div class="btmenu">
+                   <ul>
+                        <li><a href="#"><img src="images/facebook.svg" alt="페이스북"></a></li>
+                        <li><a href="#"><img src="/images/instagram.svg" alt="인스타그램"></a></li>
+                        <li><a href="#"><img src="/images/twitter.svg" alt="트위터"></a></li>
+                     </ul>
+                  </div>
+                  <div class="familysite">
+                     <select name="sitelist">
+                        <option value="#">family Site</option>
+                        <option value="#">남율호텔</option>
+                        <option value="#">성광시공중개사</option>
+                        <option value="#">남율 인테리어</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+        </footer>
+      </div>
+   </body>
+</html>

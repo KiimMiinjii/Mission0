@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+    <title>남율건설</title>
+    <!-- CSS3 활용 FullScreen 배경 구현 -->
+    <!-- 1. CSS3 background-size 속성 사용 -->
+    <!-- : 배경 이미지의 너비를 브라우저 화면 가득하게 표시하는 cover 값 활용함 -->
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <script src="javascript/jquery-2.2.4.min.js"></script>
+    <script src="javascript/jquery.backstretch.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+    <style>
+        #content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'IBM Plex Sans KR', sans-serif;
+        }
+        h1{
+            color: white;
+            font-size: 7em;
+            font-style: italic;
+            text-shadow: 2px 2px 3px #222, 2px 2px 3px black;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <a href="index.html">
+        <div id="content">
+            <h1>Enjoy Your Home</h1>
+        </div>
+        <div id="wrapper">
+    </a>
+
+    </div>
+    <script type="text/javascript">
+         $.backstretch([
+      "images/home_01.jpg"
+    , "images/home_02.jpg"
+    , "images/home_03.jpg"
+    , "images/home_04.jpg"
+  ], {duration: 3000, fade: 850});
+
+  $('document').ready(function() {
+	var options = { videoId: 'PGB__v5Ef-Q', start: 3 };
+	$('#wrapper').tubular(options);
+});
+    </script>
+    
+</div>
+</body>
+</html>

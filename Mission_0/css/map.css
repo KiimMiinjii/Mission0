@@ -1,0 +1,214 @@
+/* 초기화 */
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   list-style: none;
+   text-decoration: none;
+   word-break: keep-all;
+}
+
+body {
+   font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 전체 */
+#wrap {
+   width: 100%;
+}
+
+/* 헤더 */
+header {
+   width: 100%;
+   height: 80px;
+}
+
+#head {
+   max-width: 1440px;
+   height: 80px;
+   margin: 0 auto;
+}
+
+/* 로고 */
+#logo {
+   height: 35px;
+   float: left;
+   padding-top: 20px;
+}
+
+/* 네비게이션 */
+nav {
+   height: 80px;
+   max-width: 700px;
+   float: right;
+}
+
+nav > ul > li {
+   float: left;
+   margin-left: 80px;
+   line-height: 80px;
+}
+
+nav li a {
+   color: #cccccc;
+}
+
+nav li a:hover {
+   color: #48487d;
+}
+
+.navi > li > a:hover{
+   background-color: rgba(143, 143, 187, 0.3);
+}
+
+.submenu{
+   width: 150px;
+   position: absolute;
+   display: none;
+   z-index: 1;
+}
+
+.submenu > li > a{
+   height: 35px;
+   line-height: 35px;
+   font-size: 14px;
+   font-weight: bold;
+   text-align: center;
+   background-color: #ababab;
+   color: #ffffff;
+}
+
+.submenu > li > a:hover{
+   background-color: #30a3f3;
+}
+
+
+/* 콘텐츠 - 박스 */
+#contents {
+   width: 100%;
+   height: 400px;
+   clear: both;
+   margin-bottom: 100px;
+   z-index: 10;
+}
+
+#ms1{background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/home_01.jpg');
+   background-size: cover;
+   background-position: 0%;
+height: 400px;}
+
+.container .content{
+   color: #fff;
+   text-align: center;
+   font-size: 30px;
+   margin: 0 auto;
+   line-height: 400px;
+}
+
+
+
+/* 콘텐츠 상단-네이밍 */
+h2 {
+   font-size: 40px;
+   color: #fff;
+   font-weight: 900;
+   line-height: 400px;
+   text-align: center;
+}
+
+/* 콘텐츠 하단 */
+.map_box {
+   max-width: 1440px;
+   margin: 0 auto;
+   height: 100%;
+}
+
+#map {
+   max-width: 1000px;
+   height: 600px;
+   margin: 0 auto;
+}
+
+/* 푸터 */
+
+footer {
+   margin-top: 100px;
+   clear: both;
+   width: 100%;
+   height: 140px;
+   background-color: #48487d;
+}
+
+#foot{
+   width: 1440px;
+   margin: 0 auto;
+}
+
+.copy{
+   float: left;
+   /* Copyright 높이 */
+   height: 100px;
+   /* Copyright 너비 */
+   width: 500px;
+   text-align: center;
+   font-size: 16px;
+   line-height: 140px;
+   color: #ffffff;
+}
+
+/* .btmenu와 .familysite 묶어줌 */
+.site{
+   float: right;
+   /* 하단 메뉴(.btmenu)와 패밀리 사이트(.familysite) 들어가는 곳 높이 */
+   height: 100px;
+   /* 하단 메뉴(.btmenu)와 패밀리 사이트(.familysite) 들어가는 곳 너비 */
+   width: 500px;
+   padding-top: 20px;
+}
+
+.btmenu{
+   float: right;
+   /* 하단 메뉴 높이(site 높이의 1/2) */
+   height: 50px;
+   /* 하단 메뉴 너비 */
+   width: 300px;
+   text-align: center;
+   font-size: 16px;
+   line-height: 50px;
+}
+
+.btmenu li > a > {
+   float: left;
+   width: 100px;
+   display: inline;
+   color: #ffffff;
+}
+
+.btmenu li > a > img{
+   width: 30px;
+   height: 30px;
+   float: right;
+   margin: 10px 12px 0px 30px;
+}
+
+.btmenu li > a:hover{
+   font-weight: bold;
+}
+
+.familysite{
+   float: right;
+   /* 패밀리 사이트 높이(site 높이의 1/2) */
+   height: 80px;
+   /* 패밀리 사이트 너비 */
+   width: 300px;
+
+}
+
+.familysite select{
+   float: right;
+   height: 30px;
+   width: 180px;
+   margin-right: 10px;
+   padding-right: 10px;
+   font-size: 14px;
+}
